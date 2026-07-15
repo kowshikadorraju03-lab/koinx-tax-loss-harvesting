@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "asset": "ETH",
+    "name": "Ethereum",
+    "holding": 0.000421,
+    "price": 216182,
+    "stcg": {
+      "gain": 89.4
+    },
+    "ltcg": {
+      "gain": 0
+    }
+  },
+  {
+    "id": 2,
+    "asset": "BTC",
+    "name": "Bitcoin",
+    "holding": 0.001,
+    "price": 5000000,
+    "stcg": {
+      "gain": -5
+    },
+    "ltcg": {
+      "gain": 0
+    }
+  },
+  {
+    "id": 3,
+    "asset": "SOL",
+    "name": "Solana",
+    "holding": 2,
+    "price": 12000,
+    "stcg": {
+      "gain": 250
+    },
+    "ltcg": {
+      "gain": 50
+    }
+  }
+]
