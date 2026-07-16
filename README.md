@@ -158,6 +158,8 @@ Automatically updates whenever holdings are selected.
 ### Holdings Table
 
 ![Holdings Table](src/Screenshots/holdings-table.png)
+
+
 ---
 
 ## Future Improvements

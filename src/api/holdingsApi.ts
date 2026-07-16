@@ -1,6 +1,6 @@
 import holdings from "../data/holdings.json";
 
-export function getHoldings() {
+export function getHoldings(): Promise<any[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(holdings);

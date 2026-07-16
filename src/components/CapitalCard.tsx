@@ -11,17 +11,16 @@ interface Props {
 }
 
 function CapitalCard({ title, stcg, ltcg }: Props) {
-
   const stcgNet = stcg.profits - stcg.losses;
   const ltcgNet = ltcg.profits - ltcg.losses;
 
+  const totalCapitalGains = stcgNet + ltcgNet;
+
   return (
     <div className="bg-white shadow rounded-xl p-5">
-
       <h2 className="text-xl font-bold mb-4">
         {title}
       </h2>
-
 
       <h3 className="font-semibold">
         Short Term
@@ -39,7 +38,6 @@ function CapitalCard({ title, stcg, ltcg }: Props) {
         Net: ₹{stcgNet.toFixed(2)}
       </p>
 
-
       <h3 className="font-semibold mt-4">
         Long Term
       </h3>
@@ -56,18 +54,11 @@ function CapitalCard({ title, stcg, ltcg }: Props) {
         Net: ₹{ltcgNet.toFixed(2)}
       </p>
 
-
       <p className="mt-4 font-bold">
-        Realised Capital Gains: ₹
-        {(stcgNet + ltcgNet).toFixed(2)}
+        Realised Capital Gains: ₹{totalCapitalGains.toFixed(2)}
       </p>
-
     </div>
   );
 }
 
-<<<<<<< HEAD
-export default CapitalCard;           
-=======
 export default CapitalCard;
->>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
