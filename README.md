@@ -165,7 +165,7 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 - Selecting a holding means the entire holding is harvested.
 
 - Amount to Sell equals total holding when selected.
-=======
+
 - Amount to Sell equals the total holding when selected.
 
 - Capital gains update instantly after selection.
@@ -288,4 +288,4 @@ export default defineConfig([
 ])
 
 ```
->>>>>>> 2af0a23 (Initial commit)
+
