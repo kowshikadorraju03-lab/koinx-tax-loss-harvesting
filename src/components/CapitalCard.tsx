@@ -66,4 +66,4 @@ function CapitalCard({ title, stcg, ltcg }: Props) {
   );
 }
 
-export default CapitalCard;
+export default CapitalCard;           

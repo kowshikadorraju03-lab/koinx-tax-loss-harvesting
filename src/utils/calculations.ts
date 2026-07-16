@@ -11,17 +11,16 @@ export function calculateAfterHarvest(
   selectedHoldings.forEach((item) => {
     // Short Term Gain/Loss
     if (item.stcg.gain > 0) {
-      stcgProfit -= item.stcg.gain;
-    } else {
-      stcgLoss += Math.abs(item.stcg.gain);
-    }
+    stcgProfit += item.stcg.gain;
+} else {
+    stcgLoss += Math.abs(item.stcg.gain);
+}
 
-    // Long Term Gain/Loss
-    if (item.ltcg.gain > 0) {
-      ltcgProfit -= item.ltcg.gain;
-    } else {
-      ltcgLoss += Math.abs(item.ltcg.gain);
-    }
+if (item.ltcg.gain > 0) {
+    ltcgProfit += item.ltcg.gain;
+} else {
+    ltcgLoss += Math.abs(item.ltcg.gain);
+}
   });
 
   return {
