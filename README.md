@@ -176,15 +176,11 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 
 ### Dashboard
 
-
-
 ![Dashboard](Screenshots/dashboard.png)
 
 ### Holdings Table
 
 ![Holdings Table](Screenshots/holdings-table.png)
-
-
 
 ---
 
