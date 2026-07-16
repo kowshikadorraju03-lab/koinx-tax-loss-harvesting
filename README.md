@@ -177,8 +177,6 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 ### Dashboard
 
 
-(Add dashboard screenshot here)
-
 
 ![Dashboard](Screenshots/dashboard.png)
 
@@ -186,12 +184,6 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 
 ![Holdings Table](Screenshots/holdings-table.png)
 
-> **Note:** Make sure these image files exist:
->
-> ```
-> Screenshots/dashboard.png
-> Screenshots/holdings-table.png
-> ```
 
 
 ---
