@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 # KoinX Tax Loss Harvesting
 
 A responsive React + TypeScript application that simulates a Crypto Tax Loss Harvesting dashboard. The application displays capital gains before and after harvesting, allows users to select holdings for harvesting, and dynamically updates tax calculations.
@@ -31,7 +34,13 @@ A responsive React + TypeScript application that simulates a Crypto Tax Loss Har
 
 ## Project Structure
 
+<<<<<<< HEAD
 ```
+=======
+## Project Structure
+
+```text
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 src/
 ├── api/
 │   ├── capitalGainsApi.ts
@@ -42,33 +51,59 @@ src/
 │   └── HoldingsTable.tsx
 ├── utils/
 │   └── calculations.ts
+<<<<<<< HEAD
 ├── App.tsx
 └── main.tsx
 ```
+=======
+├── Screenshots/
+│   ├── dashboard.png
+│   └── holdings-table.png
+├── App.tsx
+└── main.tsx
+```
+```
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 
 ---
 
 ## Installation
 
+<<<<<<< HEAD
 Clone the repository
+=======
+Clone the repository:
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 
 ```bash
 git clone https://github.com/kowshikadorraju03-lab/koinx-tax-loss-harvesting.git
 ```
 
+<<<<<<< HEAD
 Navigate to the project
+=======
+Navigate to the project:
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 
 ```bash
 cd koinx-tax-loss-harvesting
 ```
 
+<<<<<<< HEAD
 Install dependencies
+=======
+Install dependencies:
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 
 ```bash
 npm install
 ```
 
+<<<<<<< HEAD
 Run the project
+=======
+Run the development server:
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 
 ```bash
 npm run dev
@@ -119,11 +154,17 @@ Displays:
 
 Updates automatically when holdings are selected.
 
+<<<<<<< HEAD
 Positive gains reduce profits.
 
 Negative gains increase losses.
 
 Tax savings are displayed whenever the realised capital gains decrease after harvesting.
+=======
+- Positive gains reduce profits.
+- Negative gains increase losses.
+- Tax savings are displayed whenever realised capital gains decrease after harvesting.
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 
 ---
 
@@ -131,7 +172,11 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 
 - Holdings data is fetched from mocked APIs.
 - Selecting a holding means the entire holding is harvested.
+<<<<<<< HEAD
 - Amount to Sell equals total holding when selected.
+=======
+- Amount to Sell equals the total holding when selected.
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 - Capital gains update instantly after selection.
 
 ---
@@ -140,11 +185,26 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 
 ### Dashboard
 
+<<<<<<< HEAD
 (Add dashboard screenshot here)
 
 ### Holdings Table
 
 (Add holdings table screenshot here)
+=======
+![Dashboard](Screenshots/dashboard.png)
+
+### Holdings Table
+
+![Holdings Table](Screenshots/holdings-table.png)
+
+> **Note:** Make sure these image files exist:
+>
+> ```
+> Screenshots/dashboard.png
+> Screenshots/holdings-table.png
+> ```
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 
 ---
 
@@ -152,7 +212,11 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 
 - Search and filter holdings
 - Sorting by gain/loss
+<<<<<<< HEAD
 - Better UI matching Figma
+=======
+- Better UI matching the Figma design
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
 - Charts for tax savings
 - Dark mode
 
@@ -172,6 +236,7 @@ The application can be deployed using:
 **Kowshika Dorraju**
 
 GitHub: https://github.com/kowshikadorraju03-lab
+<<<<<<< HEAD
 =======
 # React + TypeScript + Vite
 
@@ -249,3 +314,5 @@ export default defineConfig([
 
 ```
 >>>>>>> 2af0a23 (Initial commit)
+=======
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2

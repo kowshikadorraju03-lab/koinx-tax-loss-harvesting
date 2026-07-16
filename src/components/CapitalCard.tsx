@@ -66,4 +66,8 @@ function CapitalCard({ title, stcg, ltcg }: Props) {
   );
 }
 
+<<<<<<< HEAD
 export default CapitalCard;           
+=======
+export default CapitalCard;
+>>>>>>> 2524f364e2a945668f463f09e1757a386ef0d5e2
