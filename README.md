@@ -1,21 +1,21 @@
 # KoinX Tax Loss Harvesting
 
-A responsive **React + TypeScript** application that simulates a Crypto Tax Loss Harvesting dashboard. Users can view capital gains before and after harvesting, select holdings for tax-loss harvesting, and see tax savings updated in real time.
+A responsive **React + TypeScript** application that simulates a Crypto Tax Loss Harvesting dashboard. The application allows users to select holdings for tax loss harvesting and instantly view updated capital gains and estimated tax savings.
 
 ---
 
 ## Features
 
-- Display Before Harvesting capital gains
-- Display After Harvesting capital gains
-- Real-time tax calculation
-- Individual row selection
-- Select All / Deselect All
-- Dynamic Amount to Sell
+- Display capital gains before harvesting
+- Display capital gains after harvesting
+- Real-time tax calculations
+- Select individual holdings
+- Select All / Deselect All functionality
+- Dynamic Amount to Sell calculation
 - View All / Show Less holdings
 - Mock API integration
 - Responsive UI
-- Loading state
+- Loading state while fetching data
 
 ---
 
@@ -31,47 +31,60 @@ A responsive **React + TypeScript** application that simulates a Crypto Tax Loss
 ## Project Structure
 
 ```text
-src/
-├── api/
-│   ├── capitalGainsApi.ts
-│   └── holdingsApi.ts
-├── components/
-│   ├── Header.tsx
-│   ├── CapitalCard.tsx
-│   └── HoldingsTable.tsx
-├── utils/
-│   └── calculations.ts
-├── App.tsx
-└── main.tsx
-
-Screenshots/
-├── dashboard.png
-└── holdings-table.png
+koinx-tax-loss-harvesting/
+│
+├── public/
+│
+├── Screenshots/
+│   ├── dashboard.png
+│   └── holdings-table.png
+│
+├── src/
+│   ├── api/
+│   │   ├── capitalGainsApi.ts
+│   │   └── holdingsApi.ts
+│   │
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── CapitalCard.tsx
+│   │   └── HoldingsTable.tsx
+│   │
+│   ├── utils/
+│   │   └── calculations.ts
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
 ---
 
 ## Installation
 
-Clone the repository:
+### Clone the repository
 
 ```bash
 git clone https://github.com/kowshikadorraju03-lab/koinx-tax-loss-harvesting.git
 ```
 
-Go to the project directory:
+### Navigate to the project
 
 ```bash
 cd koinx-tax-loss-harvesting
 ```
 
-Install dependencies:
+### Install dependencies
 
 ```bash
 npm install
 ```
 
-Run the development server:
+### Run the development server
 
 ```bash
 npm run dev
@@ -85,11 +98,12 @@ npm run dev
 
 Returns:
 
-- Coin details
+- Coin name
 - Current price
 - Average buy price
-- Short-term gain
-- Long-term gain
+- Quantity held
+- Short-term gain/loss
+- Long-term gain/loss
 
 ### Capital Gains API
 
@@ -114,23 +128,23 @@ Displays:
 - Long-Term Profit
 - Long-Term Loss
 - Net Long-Term Gain
-- Realised Capital Gains
+- Total Realised Capital Gains
 
 ### After Harvesting
 
-Updates automatically whenever holdings are selected.
+Automatically updates whenever holdings are selected.
 
 - Positive gains reduce profits.
 - Negative gains increase losses.
-- Tax savings are displayed whenever realised capital gains decrease after harvesting.
+- Estimated tax savings are calculated automatically.
 
 ---
 
 ## Assumptions
 
-- Holdings data is fetched from mocked APIs.
-- Selecting a holding harvests the entire holding.
-- Amount to Sell equals the total holding when selected.
+- Holdings are fetched from mocked APIs.
+- Selecting a holding harvests the complete holding.
+- Amount to Sell equals the selected holding quantity.
 - Capital gains update instantly after selection.
 
 ---
@@ -149,17 +163,19 @@ Updates automatically whenever holdings are selected.
 
 ## Future Improvements
 
-- Search and filter holdings
-- Sorting by gain/loss
+- Search holdings
+- Filter holdings
+- Sorting options
 - Better UI matching the Figma design
-- Charts for tax savings
-- Dark mode
+- Charts for tax analysis
+- Dark mode support
+- Export tax reports
 
 ---
 
 ## Deployment
 
-This project can be deployed using:
+The application can be deployed on:
 
 - Vercel
 - Netlify
@@ -170,5 +186,11 @@ This project can be deployed using:
 
 **Kowshika Dorraju**
 
-GitHub: https://github.com/kowshikadorraju03-lab
+- GitHub: https://github.com/kowshikadorraju03-lab
+
+---
+
+## License
+
+This project is developed for the **KoinX Frontend Internship Assignment**.
 
