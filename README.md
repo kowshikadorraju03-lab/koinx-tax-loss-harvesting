@@ -1,75 +1,178 @@
-# React + TypeScript + Vite
+# KoinX Tax Loss Harvesting
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React + TypeScript application that simulates a Crypto Tax Loss Harvesting dashboard. The application displays capital gains before and after harvesting, allows users to select holdings for harvesting, and dynamically updates tax calculations.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Display Before Harvesting capital gains
+- Display After Harvesting capital gains
+- Real-time tax calculation based on selected holdings
+- Individual row selection
+- Select All / Deselect All functionality
+- Amount to Sell updates dynamically
+- View All / Show Less holdings
+- Mock API integration
+- Responsive UI
+- Loading state
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```text
+src/
+├── api/
+│   ├── capitalGainsApi.ts
+│   └── holdingsApi.ts
+├── components/
+│   ├── Header.tsx
+│   ├── CapitalCard.tsx
+│   └── HoldingsTable.tsx
+├── utils/
+│   └── calculations.ts
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Installation
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repository:
 
+```bash
+git clone https://github.com/kowshikadorraju03-lab/koinx-tax-loss-harvesting.git
 ```
+
+Navigate to the project:
+
+```bash
+cd koinx-tax-loss-harvesting
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## Mock APIs
+
+The application uses two mocked APIs:
+
+### Holdings API
+
+Returns cryptocurrency holdings including:
+
+- Coin details
+- Current price
+- Average buy price
+- Short-term gain
+- Long-term gain
+
+### Capital Gains API
+
+Returns:
+
+- Short-term profits
+- Short-term losses
+- Long-term profits
+- Long-term losses
+
+---
+
+## Functionality
+
+### Before Harvesting
+
+Displays:
+
+- Short-Term Profit
+- Short-Term Loss
+- Net Short-Term Gain
+- Long-Term Profit
+- Long-Term Loss
+- Net Long-Term Gain
+- Realised Capital Gains
+
+### After Harvesting
+
+Updates automatically when holdings are selected.
+
+- Positive gains reduce profits.
+- Negative gains increase losses.
+- Tax savings are displayed whenever realised capital gains decrease after harvesting.
+
+---
+
+## Assumptions
+
+- Holdings data is fetched from mocked APIs.
+- Selecting a holding means the entire holding is harvested.
+- Amount to Sell equals the total holding when selected.
+- Capital gains update instantly after selection.
+
+---
+
+## Screenshots
+
+### Dashboard
+
+![Dashboard](Screenshots/dashboard.png)
+
+### Holdings Table
+
+![Holdings Table](Screenshots/holdings-table.png)
+
+> **Note:** Make sure these image files exist:
+>
+> ```
+> Screenshots/dashboard.png
+> Screenshots/holdings-table.png
+> ```
+
+---
+
+## Future Improvements
+
+- Search and filter holdings
+- Sorting by gain/loss
+- Better UI matching the Figma design
+- Charts for tax savings
+- Dark mode
+
+---
+
+## Deployment
+
+The application can be deployed using:
+
+- Vercel
+- Netlify
+
+---
+
+## Author
+
+**Kowshika Dorraju**
+
+GitHub: https://github.com/kowshikadorraju03-lab
