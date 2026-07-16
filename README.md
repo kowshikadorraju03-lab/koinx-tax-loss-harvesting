@@ -1,7 +1,6 @@
-
 # KoinX Tax Loss Harvesting
 
-A responsive React + TypeScript application that simulates a Crypto Tax Loss Harvesting dashboard. The application displays capital gains before and after harvesting, allows users to select holdings for harvesting, and dynamically updates tax calculations.
+A responsive **React + TypeScript** application that simulates a Crypto Tax Loss Harvesting dashboard. Users can view capital gains before and after harvesting, select holdings for tax-loss harvesting, and see tax savings updated in real time.
 
 ---
 
@@ -9,10 +8,10 @@ A responsive React + TypeScript application that simulates a Crypto Tax Loss Har
 
 - Display Before Harvesting capital gains
 - Display After Harvesting capital gains
-- Real-time tax calculation based on selected holdings
+- Real-time tax calculation
 - Individual row selection
-- Select All / Deselect All functionality
-- Amount to Sell updates dynamically
+- Select All / Deselect All
+- Dynamic Amount to Sell
 - View All / Show Less holdings
 - Mock API integration
 - Responsive UI
@@ -31,13 +30,7 @@ A responsive React + TypeScript application that simulates a Crypto Tax Loss Har
 
 ## Project Structure
 
-
-```
-
-## Project Structure
-
 ```text
-
 src/
 ├── api/
 │   ├── capitalGainsApi.ts
@@ -50,20 +43,15 @@ src/
 │   └── calculations.ts
 ├── App.tsx
 └── main.tsx
-├── Screenshots/
-│   ├── dashboard.png
-│   └── holdings-table.png
-├── App.tsx
-└── main.tsx
-```
+
+Screenshots/
+├── dashboard.png
+└── holdings-table.png
 ```
 
 ---
 
 ## Installation
-
-
-Clone the repository
 
 Clone the repository:
 
@@ -71,18 +59,11 @@ Clone the repository:
 git clone https://github.com/kowshikadorraju03-lab/koinx-tax-loss-harvesting.git
 ```
 
-
-Navigate to the project
-
-Navigate to the project:
-
+Go to the project directory:
 
 ```bash
 cd koinx-tax-loss-harvesting
 ```
-
-
-Install dependencies
 
 Install dependencies:
 
@@ -90,11 +71,7 @@ Install dependencies:
 npm install
 ```
 
-
-Run the project
-
 Run the development server:
-
 
 ```bash
 npm run dev
@@ -104,11 +81,9 @@ npm run dev
 
 ## Mock APIs
 
-The application uses two mocked APIs:
-
 ### Holdings API
 
-Returns cryptocurrency holdings including:
+Returns:
 
 - Coin details
 - Current price
@@ -143,31 +118,19 @@ Displays:
 
 ### After Harvesting
 
-Updates automatically when holdings are selected.
-
-
-Positive gains reduce profits.
-
-Negative gains increase losses.
-
-Tax savings are displayed whenever the realised capital gains decrease after harvesting.
+Updates automatically whenever holdings are selected.
 
 - Positive gains reduce profits.
 - Negative gains increase losses.
 - Tax savings are displayed whenever realised capital gains decrease after harvesting.
-
 
 ---
 
 ## Assumptions
 
 - Holdings data is fetched from mocked APIs.
-- Selecting a holding means the entire holding is harvested.
-
-- Amount to Sell equals total holding when selected.
-
+- Selecting a holding harvests the entire holding.
 - Amount to Sell equals the total holding when selected.
-
 - Capital gains update instantly after selection.
 
 ---
@@ -181,17 +144,14 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 ### Holdings Table
 
 ![Holdings Table](Screenshots/holdings-table.png)
+
 ---
 
 ## Future Improvements
 
 - Search and filter holdings
 - Sorting by gain/loss
-
-- Better UI matching Figma
-
 - Better UI matching the Figma design
-
 - Charts for tax savings
 - Dark mode
 
@@ -199,7 +159,7 @@ Tax savings are displayed whenever the realised capital gains decrease after har
 
 ## Deployment
 
-The application can be deployed using:
+This project can be deployed using:
 
 - Vercel
 - Netlify
@@ -211,80 +171,4 @@ The application can be deployed using:
 **Kowshika Dorraju**
 
 GitHub: https://github.com/kowshikadorraju03-lab
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
 
