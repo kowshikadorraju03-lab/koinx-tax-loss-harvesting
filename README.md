@@ -153,12 +153,11 @@ Automatically updates whenever holdings are selected.
 
 ### Dashboard
 
-![Dashboard](Screenshots/dashboard.png)
+![Dashboard](src/Screenshots/dashboard.png)
 
 ### Holdings Table
 
-![Holdings Table](Screenshots/holdings-table.png)
-
+![Holdings Table](src/Screenshots/holdings-table.png)
 ---
 
 ## Future Improvements
