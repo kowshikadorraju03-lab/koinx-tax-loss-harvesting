@@ -30,6 +30,8 @@ A responsive React + TypeScript application that simulates a Crypto Tax Loss Har
 
 ## Project Structure
 
+## Project Structure
+
 ```text
 src/
 ├── api/
@@ -41,8 +43,12 @@ src/
 │   └── HoldingsTable.tsx
 ├── utils/
 │   └── calculations.ts
+├── Screenshots/
+│   ├── dashboard.png
+│   └── holdings-table.png
 ├── App.tsx
 └── main.tsx
+```
 ```
 
 ---
