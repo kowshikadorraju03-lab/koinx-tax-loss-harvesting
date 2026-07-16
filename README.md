@@ -193,4 +193,3 @@ The application can be deployed on:
 ## License
 
 This project is developed for the **KoinX Frontend Internship Assignment**.
-
