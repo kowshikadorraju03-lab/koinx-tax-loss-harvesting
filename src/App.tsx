@@ -13,29 +13,46 @@ function App() {
   const [holdings, setHoldings] = useState<any[]>([]);
   const [capitalGains, setCapitalGains] = useState<any>(null);
   const [selectedHoldings, setSelectedHoldings] = useState<any[]>([]);
-  console.log("Selected:", selectedHoldings);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     async function fetchData() {
-      const holdingsData = await getHoldings();
-      const capitalData = await getCapitalGains();
+      try {
+        const holdingsData = await getHoldings();
+        const capitalData = await getCapitalGains();
 
-      setHoldings(holdingsData);
-      setCapitalGains(capitalData);
-
-      setLoading(false);
+        setHoldings(holdingsData);
+        setCapitalGains(capitalData);
+      } catch (err) {
+        console.error(err);
+        setError("Failed to load data");
+      } finally {
+        setLoading(false);
+      }
     }
 
     fetchData();
   }, []);
 
-  if (loading || !capitalGains) {
+  if (loading) {
     return (
       <h2 className="p-10 text-xl">
         Loading holdings...
       </h2>
     );
+  }
+
+  if (error) {
+    return (
+      <h2 className="p-10 text-xl text-red-600">
+        {error}
+      </h2>
+    );
+  }
+
+  if (!capitalGains) {
+    return null;
   }
 
   const afterHarvest = calculateAfterHarvest(
@@ -62,7 +79,9 @@ function App() {
       <Header />
 
       <main className="p-6 space-y-6">
+
         <div className="grid md:grid-cols-2 gap-6">
+
           <CapitalCard
             title="Before Harvesting"
             stcg={capitalGains.stcg}
@@ -74,6 +93,7 @@ function App() {
             stcg={afterHarvest.stcg}
             ltcg={afterHarvest.ltcg}
           />
+
         </div>
 
         {savings > 0 && (
@@ -86,6 +106,7 @@ function App() {
           holdings={holdings}
           setSelectedHoldings={setSelectedHoldings}
         />
+
       </main>
     </div>
   );
